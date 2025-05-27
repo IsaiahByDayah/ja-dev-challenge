@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+/* Various colors pulled from sample screenshot */
+@theme {
+  --color-blue-light: #cfe5fd;
+  --color-blue-medium: #234b83;
+  --color-blue-dark: #0b2538;
+
+  --color-teal: #86d8b4;
+
+  --color-gray-light: #757a7e;
+  --color-gray-dark: #464b4f;
+}
+
+@layer base {
+  body {
+    @apply text-gray-dark;
+  }
+}
+
+@utility btn-ghost {
+  @apply hover:bg-gray-light/10 active:bg-gray-light/20;
+}
+
+@utility btn-dark-blue {
+  @apply bg-blue-dark text-white hover:bg-[hsl(from_var(--color-blue-dark)_h_s_calc(l_+_10))] active:bg-[hsl(from_var(--color-blue-dark)_h_s_calc(l_+_5))];
+}
+
+@utility card {
+  @apply rounded-lg;
+}
