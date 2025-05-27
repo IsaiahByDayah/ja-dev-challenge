@@ -45,8 +45,10 @@ export const ResourceCard = ({ className, resource }: ResourceCardProps) => {
       queryClient.invalidateQueries({ queryKey: ["getBookmarks"] }),
   })
 
+  // handle any api latency
   const isMutationPending =
     bookmarkMutation.isPending || unbookmarkMutation.isPending
+
   const isBookmarked = bookmarkMutation.isPending
     ? true
     : unbookmarkMutation.isPending
