@@ -9,6 +9,8 @@
     "lint": "eslint .",
     "format": "prettier --check \"**/*.{js,jsx,ts,tsx,mjs,cjs,json,md}\"",
     "format:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,cjs,json,md}\"",
+    "test": "node --experimental-strip-types --test **/*.test.ts",
+    "test:watch": "node --experimental-strip-types --test --watch **/*.test.ts",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -23,6 +25,7 @@
     "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
     "@tailwindcss/vite": "^4.1.7",
     "@tanstack/eslint-plugin-query": "^5.78.0",
+    "@types/node": "^22.15.21",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
